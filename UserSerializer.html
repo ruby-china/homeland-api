@@ -3,10 +3,8 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
+        <title>UserSerializer - Homeland API</title>
         
-        
-        <base href="/">
         
 
 
@@ -91,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="getting-started.html"><strong aria-hidden="true">1.</strong> 快速开始</a></li><li class="chapter-item expanded "><a href="root.html"><strong aria-hidden="true">2.</strong> API 功能</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="root.html"><strong aria-hidden="true">2.1.</strong> 基础 - Root</a></li><li class="chapter-item expanded "><a href="users.html"><strong aria-hidden="true">2.2.</strong> 账号 - Users</a></li><li class="chapter-item expanded "><a href="nodes.html"><strong aria-hidden="true">2.3.</strong> 节点 - Nodes</a></li><li class="chapter-item expanded "><a href="topics.html"><strong aria-hidden="true">2.4.</strong> 话题 - Topics</a></li><li class="chapter-item expanded "><a href="replies.html"><strong aria-hidden="true">2.5.</strong> 回帖 - Replies</a></li><li class="chapter-item expanded "><a href="photos.html"><strong aria-hidden="true">2.6.</strong> 图片附件 - Photos</a></li><li class="chapter-item expanded "><a href="likes.html"><strong aria-hidden="true">2.7.</strong> 点赞 - Likes</a></li><li class="chapter-item expanded "><a href="notifications.html"><strong aria-hidden="true">2.8.</strong> 通知 - Notifications</a></li></ol></li><li class="chapter-item expanded "><a href="UserSerializer.html"><strong aria-hidden="true">3.</strong> 数据类型</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="UserSerializer.html"><strong aria-hidden="true">3.1.</strong> UserSerializer</a></li><li class="chapter-item expanded "><a href="UserDetailSerializer.html"><strong aria-hidden="true">3.2.</strong> UserDetailSerializer</a></li><li class="chapter-item expanded "><a href="TopicSerializer.html"><strong aria-hidden="true">3.3.</strong> TopicSerializer</a></li><li class="chapter-item expanded "><a href="TopicDetailSerializer.html"><strong aria-hidden="true">3.4.</strong> TopicDetailSerializer</a></li><li class="chapter-item expanded "><a href="ReplySerializer.html"><strong aria-hidden="true">3.5.</strong> ReplySerializer</a></li><li class="chapter-item expanded "><a href="ReplyDetailSerializer.html"><strong aria-hidden="true">3.6.</strong> ReplyDetailSerializer</a></li><li class="chapter-item expanded "><a href="NodeSerializer.html"><strong aria-hidden="true">3.7.</strong> NodeSerializer</a></li><li class="chapter-item expanded "><a href="NotificationSerializer.html"><strong aria-hidden="true">3.8.</strong> NotificationSerializer</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="getting-started.html"><strong aria-hidden="true">1.</strong> 快速开始</a></li><li class="chapter-item expanded "><a href="root.html"><strong aria-hidden="true">2.</strong> API 功能</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="root.html"><strong aria-hidden="true">2.1.</strong> 基础 - Root</a></li><li class="chapter-item expanded "><a href="users.html"><strong aria-hidden="true">2.2.</strong> 账号 - Users</a></li><li class="chapter-item expanded "><a href="nodes.html"><strong aria-hidden="true">2.3.</strong> 节点 - Nodes</a></li><li class="chapter-item expanded "><a href="topics.html"><strong aria-hidden="true">2.4.</strong> 话题 - Topics</a></li><li class="chapter-item expanded "><a href="replies.html"><strong aria-hidden="true">2.5.</strong> 回帖 - Replies</a></li><li class="chapter-item expanded "><a href="photos.html"><strong aria-hidden="true">2.6.</strong> 图片附件 - Photos</a></li><li class="chapter-item expanded "><a href="likes.html"><strong aria-hidden="true">2.7.</strong> 点赞 - Likes</a></li><li class="chapter-item expanded "><a href="notifications.html"><strong aria-hidden="true">2.8.</strong> 通知 - Notifications</a></li></ol></li><li class="chapter-item expanded "><a href="UserSerializer.html" class="active"><strong aria-hidden="true">3.</strong> 数据类型</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="UserSerializer.html" class="active"><strong aria-hidden="true">3.1.</strong> UserSerializer</a></li><li class="chapter-item expanded "><a href="UserDetailSerializer.html"><strong aria-hidden="true">3.2.</strong> UserDetailSerializer</a></li><li class="chapter-item expanded "><a href="TopicSerializer.html"><strong aria-hidden="true">3.3.</strong> TopicSerializer</a></li><li class="chapter-item expanded "><a href="TopicDetailSerializer.html"><strong aria-hidden="true">3.4.</strong> TopicDetailSerializer</a></li><li class="chapter-item expanded "><a href="ReplySerializer.html"><strong aria-hidden="true">3.5.</strong> ReplySerializer</a></li><li class="chapter-item expanded "><a href="ReplyDetailSerializer.html"><strong aria-hidden="true">3.6.</strong> ReplyDetailSerializer</a></li><li class="chapter-item expanded "><a href="NodeSerializer.html"><strong aria-hidden="true">3.7.</strong> NodeSerializer</a></li><li class="chapter-item expanded "><a href="NotificationSerializer.html"><strong aria-hidden="true">3.8.</strong> NotificationSerializer</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -161,15 +159,30 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#document-not-found-404" id="document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1><a class="header" href="#userserializer" id="userserializer">UserSerializer</a></h1>
+<p>用户 API 返回数据结构</p>
+<h2><a class="header" href="#a-hrefhttpswwwyuquecomruby-chinaapiuserserializerattributesaattributes" id="a-hrefhttpswwwyuquecomruby-chinaapiuserserializerattributesaattributes"><a href="https://www.yuque.com/ruby-china/api/userserializer#attributes"></a>attributes</a></h2>
+<ul>
+<li><strong>id</strong> [Integer] 用户编号</li>
+<li><strong>login</strong> [String] 用户名</li>
+<li><strong>name</strong> [String] 用户姓名</li>
+<li><strong>avatar_url</strong> [String] 头像 URL</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
+                            <a rel="prev" href="notifications.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
 
+                        
+                            <a rel="next" href="UserSerializer.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -179,7 +192,15 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
+                    <a rel="prev" href="notifications.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
 
+                
+                    <a rel="next" href="UserSerializer.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                 
             </nav>
 

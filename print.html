@@ -91,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="getting-started.html">快速开始</a></li><li class="chapter-item expanded "><a href="root.html"><strong aria-hidden="true">1.</strong> 基础 - Root</a></li><li class="chapter-item expanded "><a href="users.html"><strong aria-hidden="true">2.</strong> 账号 - Users</a></li><li class="chapter-item expanded "><a href="nodes.html"><strong aria-hidden="true">3.</strong> 节点 - Nodes</a></li><li class="chapter-item expanded "><a href="topics.html"><strong aria-hidden="true">4.</strong> 话题 - Topics</a></li><li class="chapter-item expanded "><a href="replies.html"><strong aria-hidden="true">5.</strong> 回帖 - Replies</a></li><li class="chapter-item expanded "><a href="photos.html"><strong aria-hidden="true">6.</strong> 图片附件 - Photos</a></li><li class="chapter-item expanded "><a href="likes.html"><strong aria-hidden="true">7.</strong> 点赞 - Likes</a></li><li class="chapter-item expanded "><a href="notifications.html"><strong aria-hidden="true">8.</strong> 通知 - Notifications</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="getting-started.html"><strong aria-hidden="true">1.</strong> 快速开始</a></li><li class="chapter-item expanded "><a href="root.html"><strong aria-hidden="true">2.</strong> API 功能</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="root.html"><strong aria-hidden="true">2.1.</strong> 基础 - Root</a></li><li class="chapter-item expanded "><a href="users.html"><strong aria-hidden="true">2.2.</strong> 账号 - Users</a></li><li class="chapter-item expanded "><a href="nodes.html"><strong aria-hidden="true">2.3.</strong> 节点 - Nodes</a></li><li class="chapter-item expanded "><a href="topics.html"><strong aria-hidden="true">2.4.</strong> 话题 - Topics</a></li><li class="chapter-item expanded "><a href="replies.html"><strong aria-hidden="true">2.5.</strong> 回帖 - Replies</a></li><li class="chapter-item expanded "><a href="photos.html"><strong aria-hidden="true">2.6.</strong> 图片附件 - Photos</a></li><li class="chapter-item expanded "><a href="likes.html"><strong aria-hidden="true">2.7.</strong> 点赞 - Likes</a></li><li class="chapter-item expanded "><a href="notifications.html"><strong aria-hidden="true">2.8.</strong> 通知 - Notifications</a></li></ol></li><li class="chapter-item expanded "><a href="UserSerializer.html"><strong aria-hidden="true">3.</strong> 数据类型</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="UserSerializer.html"><strong aria-hidden="true">3.1.</strong> UserSerializer</a></li><li class="chapter-item expanded "><a href="UserDetailSerializer.html"><strong aria-hidden="true">3.2.</strong> UserDetailSerializer</a></li><li class="chapter-item expanded "><a href="TopicSerializer.html"><strong aria-hidden="true">3.3.</strong> TopicSerializer</a></li><li class="chapter-item expanded "><a href="TopicDetailSerializer.html"><strong aria-hidden="true">3.4.</strong> TopicDetailSerializer</a></li><li class="chapter-item expanded "><a href="ReplySerializer.html"><strong aria-hidden="true">3.5.</strong> ReplySerializer</a></li><li class="chapter-item expanded "><a href="ReplyDetailSerializer.html"><strong aria-hidden="true">3.6.</strong> ReplyDetailSerializer</a></li><li class="chapter-item expanded "><a href="NodeSerializer.html"><strong aria-hidden="true">3.7.</strong> NodeSerializer</a></li><li class="chapter-item expanded "><a href="NotificationSerializer.html"><strong aria-hidden="true">3.8.</strong> NotificationSerializer</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -128,6 +128,10 @@
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        <a href="https://github.com/ruby-china/homeland-api" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
                         
                     </div>
@@ -216,7 +220,14 @@ puts res.statusputs res.body
 <pre><code>GET /api/v3/hello
 </code></pre>
 <h3><a class="header" href="#response" id="response">Response</a></h3>
-<p><a href="UserDetailSerializer">UserDetailSerializer</a></p>
+<p><a href="UserDetailSerializer.html">UserDetailSerializer</a></p>
+<h1><a class="header" href="#基础---root-1" id="基础---root-1">基础 - Root</a></h1>
+<h3><a class="header" href="#简单的-api-测试接口-1" id="简单的-api-测试接口-1">简单的 API 测试接口</a></h3>
+<p>简单的 API 测试接口，需要验证，便于快速测试 OAuth 以及其他 API 的基本格式是否正确</p>
+<pre><code>GET /api/v3/hello
+</code></pre>
+<h3><a class="header" href="#response-1" id="response-1">Response</a></h3>
+<p><a href="UserDetailSerializer.html">UserDetailSerializer</a></p>
 <h1><a class="header" href="#账号---users" id="账号---users">账号 - Users</a></h1>
 <h2><a class="header" href="#获取热门用户" id="获取热门用户">获取热门用户</a></h2>
 <pre><code class="language-markup">GET /api/v3/users
@@ -225,20 +236,20 @@ puts res.statusputs res.body
 <ul>
 <li>limit (Integer)  - default: 20，range: 1..100</li>
 </ul>
-<h3><a class="header" href="#response-1" id="response-1">Response</a></h3>
-<p>Array&lt;<a href="/ruby-china/api/UserSerializer">UserSerializer</a>&gt;</p>
+<h3><a class="header" href="#response-2" id="response-2">Response</a></h3>
+<p>Array&lt;<a href="/ruby-china/api/UserSerializer.html">UserSerializer</a>&gt;</p>
 <h2><a class="header" href="#获取某个用户的详细信息" id="获取某个用户的详细信息">获取某个用户的详细信息</a></h2>
 <p>获取 <code>:id</code> 用户的详细信息</p>
 <pre><code class="language-markup">GET /api/v3/users/:id
 </code></pre>
-<h3><a class="header" href="#response-2" id="response-2">Response</a></h3>
-<p><a href="/ruby-china/api/UserDetailSerializer">UserDetailSerializer</a></p>
+<h3><a class="header" href="#response-3" id="response-3">Response</a></h3>
+<p><a href="/ruby-china/api/UserDetailSerializer.html">UserDetailSerializer</a></p>
 <h2><a class="header" href="#获取当前用户的完整信息" id="获取当前用户的完整信息">获取当前用户的完整信息</a></h2>
 <p>用于个人设置修改资料</p>
 <pre><code class="language-markup">GET /api/v3/users/me
 </code></pre>
-<h3><a class="header" href="#response-3" id="response-3">Response</a></h3>
-<p><a href="/ruby-china/api/UserDetailSerializer">UserDetailSerializer</a></p>
+<h3><a class="header" href="#response-4" id="response-4">Response</a></h3>
+<p><a href="/ruby-china/api/UserDetailSerializer.html">UserDetailSerializer</a></p>
 <h2><a class="header" href="#用户回帖列表" id="用户回帖列表">用户回帖列表</a></h2>
 <p>获取某个用户的回帖列表</p>
 <pre><code class="language-markup">GET /api/v3/users/:id/replies
@@ -253,8 +264,8 @@ puts res.statusputs res.body
 <li>offset (Integer) - default: 0</li>
 <li>limit (Integer) - default: 20, range: 1..150</li>
 </ul>
-<h3><a class="header" href="#response-4" id="response-4">Response</a></h3>
-<p>Array&lt;<a href="/ruby-china/api/TopicSerializer">TopicSerializer</a>&gt;</p>
+<h3><a class="header" href="#response-5" id="response-5">Response</a></h3>
+<p>Array&lt;<a href="/ruby-china/api/TopicSerializer.html">TopicSerializer</a>&gt;</p>
 <h2><a class="header" href="#屏蔽用户" id="屏蔽用户">屏蔽用户</a></h2>
 <p>当前用户屏蔽 <code>:id</code> 的用户</p>
 <pre><code class="language-markup">POST /api/v3/users/:id/block
@@ -272,8 +283,8 @@ puts res.statusputs res.body
 <li>offset (Integer) - default: 0</li>
 <li>limit (Integer) - default: 20, range: 1..150</li>
 </ul>
-<h3><a class="header" href="#response-5" id="response-5">Response</a></h3>
-<p>Array&lt;<a href="/ruby-china/api/UserSerializer">UserSerializer</a>&gt;</p>
+<h3><a class="header" href="#response-6" id="response-6">Response</a></h3>
+<p>Array&lt;<a href="/ruby-china/api/UserSerializer.html">UserSerializer</a>&gt;</p>
 <h2><a class="header" href="#关注用户" id="关注用户">关注用户</a></h2>
 <p>当前用户关注 <code>:id</code> 的用户</p>
 <pre><code class="language-markup">POST /api/v3/users/:id/follow
@@ -291,8 +302,8 @@ puts res.statusputs res.body
 <li>offset (Integer) - default: 0</li>
 <li>limit (Integer) - default: 20, range: 1..150</li>
 </ul>
-<h3><a class="header" href="#response-6" id="response-6">Response</a></h3>
-<p>Array&lt;<a href="/ruby-china/api/UserSerializer">UserSerializer</a>&gt;</p>
+<h3><a class="header" href="#response-7" id="response-7">Response</a></h3>
+<p>Array&lt;<a href="/ruby-china/api/UserSerializer.html">UserSerializer</a>&gt;</p>
 <h2><a class="header" href="#获取用户的关注者列表" id="获取用户的关注者列表">获取用户的关注者列表</a></h2>
 <p>获取关注 <code>:id</code> 用户的人的列表</p>
 <pre><code class="language-markup">GET /api/v3/users/:id/followers
@@ -302,8 +313,8 @@ puts res.statusputs res.body
 <li>offset (Integer) - default: 0</li>
 <li>limit (Integer) - default: 20, range: 1..150</li>
 </ul>
-<h3><a class="header" href="#response-7" id="response-7">Response</a></h3>
-<p>Array&lt;<a href="/ruby-china/api/UserSerializer">UserSerializer</a>&gt;</p>
+<h3><a class="header" href="#response-8" id="response-8">Response</a></h3>
+<p>Array&lt;<a href="/ruby-china/api/UserSerializer.html">UserSerializer</a>&gt;</p>
 <h2><a class="header" href="#获取某个用户的收藏列表" id="获取某个用户的收藏列表">获取某个用户的收藏列表</a></h2>
 <p>获取 <code>:id</code> 用户收藏的话题列表</p>
 <pre><code class="language-markup">GET /api/v3/users/:id/favorites
@@ -313,20 +324,20 @@ puts res.statusputs res.body
 <li>offset (Integer) - default: 0</li>
 <li>limit (Integer) - default: 20, range: 1..150</li>
 </ul>
-<h3><a class="header" href="#response-8" id="response-8">Response</a></h3>
-<p>Array&lt;<a href="/ruby-china/api/TopicSerializer">TopicSerializer</a>&gt;</p>
+<h3><a class="header" href="#response-9" id="response-9">Response</a></h3>
+<p>Array&lt;<a href="/ruby-china/api/TopicSerializer.html">TopicSerializer</a>&gt;</p>
 <h1><a class="header" href="#节点---nodes" id="节点---nodes">节点 - Nodes</a></h1>
 <h2><a class="header" href="#获取节点列表" id="获取节点列表">获取节点列表</a></h2>
 <pre><code class="language-markup">GET /api/v3/nodes
 </code></pre>
-<h3><a class="header" href="#response-9" id="response-9">Response</a></h3>
-<p>Array&lt;<a href="NodeSerializer">NodeSerializer</a>&gt;</p>
+<h3><a class="header" href="#response-10" id="response-10">Response</a></h3>
+<p>Array&lt;<a href="NodeSerializer.html">NodeSerializer</a>&gt;</p>
 <h2><a class="header" href="#节点详情" id="节点详情">节点详情</a></h2>
 <p>获取单个 Node 详情</p>
 <pre><code class="language-markup">GET /api/v3/nodes/:id
 </code></pre>
-<h3><a class="header" href="#response-10" id="response-10">Response</a></h3>
-<p><a href="http://yuque.com/ruby-china/api/nodes/NodeSerializer">NodeSerializer</a></p>
+<h3><a class="header" href="#response-11" id="response-11">Response</a></h3>
+<p><a href="http://yuque.com/ruby-china/api/nodes/NodeSerializer.md">NodeSerializer</a></p>
 <h1><a class="header" href="#话题---topics" id="话题---topics">话题 - Topics</a></h1>
 <h2><a class="header" href="#获取话题列表" id="获取话题列表">获取话题列表</a></h2>
 <p>获取话题列表，类似 Ruby China <a href="https://ruby-china.org/topics">话题列表</a>的内容，支持多种排序方式。</p>
@@ -336,21 +347,21 @@ puts res.statusputs res.body
 <ul>
 <li>type (String) - 排序类型, default: <code>last_actived</code>
 <ul>
-<li>可选值：<code>last_actived, recent, no_reply, popular, excellent</code> </li>
+<li>可选值：<code>last_actived, recent, no_reply, popular, excellent</code></li>
 </ul>
 </li>
 <li>node_id (Integer) - 节点编号，如果有给，就会只去节点下的话题</li>
 <li>offset (Integer) - default: 0</li>
 <li>limit (Integer) - default: 20, range: 1..150</li>
 </ul>
-<h3><a class="header" href="#response-11" id="response-11">Response</a></h3>
-<p>Array&lt;<a href="TopicSerializer">TopicSerializer</a>&gt;</p>
+<h3><a class="header" href="#response-12" id="response-12">Response</a></h3>
+<p>Array&lt;<a href="TopicSerializer.html">TopicSerializer</a>&gt;</p>
 <h2><a class="header" href="#话题详情" id="话题详情">话题详情</a></h2>
 <p>获取话题详情（不含回帖）</p>
 <pre><code class="language-markup">GET /api/v3/topics/:id
 </code></pre>
-<h3><a class="header" href="#response-12" id="response-12">Response</a></h3>
-<p><a href="TopicDetailSerializer">TopicDetailSerializer</a></p>
+<h3><a class="header" href="#response-13" id="response-13">Response</a></h3>
+<p><a href="TopicDetailSerializer.html">TopicDetailSerializer</a></p>
 <h2><a class="header" href="#创建新话题" id="创建新话题">创建新话题</a></h2>
 <p>创建一篇新的话题</p>
 <pre><code class="language-markup">POST /api/v3/topics
@@ -361,8 +372,8 @@ puts res.statusputs res.body
 <li>node_id (Integer) — 节点编号, [required]</li>
 <li>body (Markdown) — 格式的正文, [required]</li>
 </ul>
-<h3><a class="header" href="#response-13" id="response-13">Response</a></h3>
-<p><a href="TopicDetailSerializer">TopicDetailSerializer</a></p>
+<h3><a class="header" href="#response-14" id="response-14">Response</a></h3>
+<p><a href="TopicDetailSerializer.html">TopicDetailSerializer</a></p>
 <h2><a class="header" href="#修改话题" id="修改话题">修改话题</a></h2>
 <p>修改话题内容</p>
 <pre><code class="language-markup">PUT /api/v3/topics/:id
@@ -373,8 +384,8 @@ puts res.statusputs res.body
 <li>node_id (Integer) — 节点编号, [required]</li>
 <li>body (Markdown) — 格式的正文, [required]</li>
 </ul>
-<h3><a class="header" href="#response-14" id="response-14">Response</a></h3>
-<p><a href="TopicDetailSerializer">TopicDetailSerializer</a></p>
+<h3><a class="header" href="#response-15" id="response-15">Response</a></h3>
+<p><a href="TopicDetailSerializer.html">TopicDetailSerializer</a></p>
 <h2><a class="header" href="#删除话题" id="删除话题">删除话题</a></h2>
 <p>删除一篇话题</p>
 <pre><code class="language-markup">DELETE /api/v3/topics/:id
@@ -387,8 +398,8 @@ puts res.statusputs res.body
 <ul>
 <li>body (String) - 回帖正文</li>
 </ul>
-<h3><a class="header" href="#response-15" id="response-15">Response</a></h3>
-<p><a href="ReplySerializer">ReplySerializer</a></p>
+<h3><a class="header" href="#response-16" id="response-16">Response</a></h3>
+<p><a href="ReplySerializer.html">ReplySerializer</a></p>
 <h2><a class="header" href="#话题的回帖列表" id="话题的回帖列表">话题的回帖列表</a></h2>
 <p>获取话题的回帖列表</p>
 <pre><code class="language-markup">GET /api/v3/topics/:id/replies
@@ -398,8 +409,8 @@ puts res.statusputs res.body
 <li>offset (Integer) - default: 0</li>
 <li>limit (Integer) - default: 20, range: 1..150</li>
 </ul>
-<h3><a class="header" href="#response-16" id="response-16">Response</a></h3>
-<p>Array&lt;<a href="ReplySerializer">ReplySerializer</a>&gt;</p>
+<h3><a class="header" href="#response-17" id="response-17">Response</a></h3>
+<p>Array&lt;<a href="ReplySerializer.html">ReplySerializer</a>&gt;</p>
 <h2><a class="header" href="#关注话题" id="关注话题">关注话题</a></h2>
 <pre><code class="language-markup">POST /api/v3/topics/:id/follow
 </code></pre>
@@ -425,8 +436,8 @@ puts res.statusputs res.body
 <p>获取回帖的详细内容（一般用于编辑回帖的时候）</p>
 <pre><code class="language-markup">GET /api/v3/replies/:id
 </code></pre>
-<h3><a class="header" href="#response-17" id="response-17">Response</a></h3>
-<p><a href="ReplyDetailSerializer">ReplyDetailSerializer</a></p>
+<h3><a class="header" href="#response-18" id="response-18">Response</a></h3>
+<p><a href="ReplyDetailSerializer.html">ReplyDetailSerializer</a></p>
 <h2><a class="header" href="#修改回帖" id="修改回帖">修改回帖</a></h2>
 <pre><code class="language-markup">POST /api/v3/replies/:id
 </code></pre>
@@ -434,8 +445,8 @@ puts res.statusputs res.body
 <ul>
 <li>body (String) - 回帖内容 [required]</li>
 </ul>
-<h3><a class="header" href="#response-18" id="response-18">Response</a></h3>
-<p><a href="ReplyDetailSerializer">ReplyDetailSerializer</a> - 更新过后的数据</p>
+<h3><a class="header" href="#response-19" id="response-19">Response</a></h3>
+<p><a href="ReplyDetailSerializer.html">ReplyDetailSerializer</a> - 更新过后的数据</p>
 <h2><a class="header" href="#删除回帖" id="删除回帖">删除回帖</a></h2>
 <pre><code class="language-markup">DELETE /api/v3/replies/:id
 </code></pre>
@@ -448,7 +459,7 @@ puts res.statusputs res.body
 <ul>
 <li>file - 文件信息, [required]</li>
 </ul>
-<h3><a class="header" href="#response-19" id="response-19">Response</a></h3>
+<h3><a class="header" href="#response-20" id="response-20">Response</a></h3>
 <pre><code class="language-json">{
   image_url: '图片 URL',
 }
@@ -464,7 +475,7 @@ puts res.statusputs res.body
 <li>obj_type (String) — 类型 <code>[topic, reply]</code> </li>
 <li>obj_id (Integer) — 对应数据的编号</li>
 </ul>
-<h3><a class="header" href="#response-20" id="response-20">Response</a></h3>
+<h3><a class="header" href="#response-21" id="response-21">Response</a></h3>
 <ul>
 <li>count [Integer] 已赞的数量</li>
 </ul>
@@ -486,8 +497,8 @@ puts res.statusputs res.body
 <li>offset (Integer) - default: 0</li>
 <li>limit (Integer) - default: 20, range: 1..150</li>
 </ul>
-<h3><a class="header" href="#response-21" id="response-21">Response</a></h3>
-<p>Array&lt;<a href="NotificationSerializer">NotificationSerializer</a>&gt;</p>
+<h3><a class="header" href="#response-22" id="response-22">Response</a></h3>
+<p>Array&lt;<a href="NotificationSerializer.html">NotificationSerializer</a>&gt;</p>
 <h2><a class="header" href="#批量将通知设成已读状态" id="批量将通知设成已读状态">批量将通知设成已读状态</a></h2>
 <p>将当前用户的一些通知设成已读状态</p>
 <pre><code class="language-markup">POST /api/v3/notifications/read
@@ -508,6 +519,144 @@ puts res.statusputs res.body
 <p>删除当前用户的所有通知</p>
 <pre><code class="language-markup">DELETE /api/v3/notifications/all
 </code></pre>
+<h1><a class="header" href="#userserializer" id="userserializer">UserSerializer</a></h1>
+<p>用户 API 返回数据结构</p>
+<h2><a class="header" href="#a-hrefhttpswwwyuquecomruby-chinaapiuserserializerattributesaattributes" id="a-hrefhttpswwwyuquecomruby-chinaapiuserserializerattributesaattributes"><a href="https://www.yuque.com/ruby-china/api/userserializer#attributes"></a>attributes</a></h2>
+<ul>
+<li><strong>id</strong> [Integer] 用户编号</li>
+<li><strong>login</strong> [String] 用户名</li>
+<li><strong>name</strong> [String] 用户姓名</li>
+<li><strong>avatar_url</strong> [String] 头像 URL</li>
+</ul>
+<h1><a class="header" href="#userserializer-1" id="userserializer-1">UserSerializer</a></h1>
+<p>用户 API 返回数据结构</p>
+<h2><a class="header" href="#a-hrefhttpswwwyuquecomruby-chinaapiuserserializerattributesaattributes-1" id="a-hrefhttpswwwyuquecomruby-chinaapiuserserializerattributesaattributes-1"><a href="https://www.yuque.com/ruby-china/api/userserializer#attributes"></a>attributes</a></h2>
+<ul>
+<li><strong>id</strong> [Integer] 用户编号</li>
+<li><strong>login</strong> [String] 用户名</li>
+<li><strong>name</strong> [String] 用户姓名</li>
+<li><strong>avatar_url</strong> [String] 头像 URL</li>
+</ul>
+<h1><a class="header" href="#userdetailserializer" id="userdetailserializer">UserDetailSerializer</a></h1>
+<p>用户详细信息 API 返回数据结构</p>
+<h2><a class="header" href="#attributes" id="attributes">attributes</a></h2>
+<ul>
+<li><strong>id</strong> [Integer] 用户编号</li>
+<li><strong>login</strong> [String] 用户名</li>
+<li><strong>name</strong> [String] 用户姓名</li>
+<li><strong>avatar_url</strong> [String] 头像 URL</li>
+<li><strong>location</strong> [String] 城市</li>
+<li><strong>company</strong> [String] 公司名称</li>
+<li><strong>github</strong> [String] GitHub ID</li>
+<li><strong>twitter</strong> [String] Twitter ID</li>
+<li><strong>website</strong> [String] 个人主页 URL</li>
+<li><strong>bio</strong> [String] 个人介绍</li>
+<li><strong>tagline</strong> [String] 一段话的简单个人介绍</li>
+<li><strong>email</strong> [String] Email 地址</li>
+<li><strong>topics_count</strong> [Integer] 用户创建的话题数量</li>
+<li><strong>replies_count</strong> [Integer] 用户创建的回帖数量</li>
+<li><strong>following_count</strong> [Integer] 关注了多少人</li>
+<li><strong>followers_count</strong> [Integer] 有多少个关注者</li>
+<li><strong>favorites_count</strong> [Integer] 收藏的话题数量</li>
+<li><strong>level</strong> [String] 用户级别</li>
+<li><strong>level_name</strong> [String] 用户级别(用于显示)</li>
+<li><strong>created_at</strong> [DateTime] 注册时间 <code>ISO 8601</code> 格式</li>
+</ul>
+<h1><a class="header" href="#topicserializer" id="topicserializer">TopicSerializer</a></h1>
+<p>话题信息，一般在列表返回的时候出现。</p>
+<h2><a class="header" href="#attributes-1" id="attributes-1">attributes</a></h2>
+<ul>
+<li><strong>id</strong> [Integer] 话题编号</li>
+<li><strong>title</strong> [String] 标题</li>
+<li><strong>node_name</strong> [String] 节点名称</li>
+<li><strong>node_id</strong> [Integer] 节点 ID</li>
+<li><strong>excellent</strong> [Boolean] 是否精华</li>
+<li><strong>deleted</strong> [Boolean] 是否已删除</li>
+<li><strong>replies_count</strong> [Integer] 回帖数量</li>
+<li><strong>likes_count</strong> [Integer] 赞数量</li>
+<li><strong>last_reply_user_id</strong> [Integer] 最后回复人用户编号</li>
+<li><strong>last_reply_user_login</strong> [String] 最后回复者 login</li>
+<li><strong>user</strong> <a href="UserSerializer.html">UserSerializer</a> 最后回复者用户对象</li>
+<li><strong>replied_at</strong> [DateTime] 最后回帖时间</li>
+<li><strong>created_at</strong> [DateTime] 创建时间</li>
+<li><strong>updated_at</strong> [DateTime] 更新时间</li>
+</ul>
+<h1><a class="header" href="#topicdetailserializer" id="topicdetailserializer">TopicDetailSerializer</a></h1>
+<p>完整话题详情 话题信息</p>
+<h2><a class="header" href="#attributes-2" id="attributes-2">attributes</a></h2>
+<ul>
+<li><strong>id</strong> [Integer] 话题编号</li>
+<li><strong>title</strong> [String] 标题</li>
+<li><strong>node_name</strong> [String] 节点名称</li>
+<li><strong>node_id</strong> [Integer] 节点 ID</li>
+<li><strong>excellent</strong> [Boolean] 是否精华</li>
+<li><strong>deleted</strong> [Boolean] 是否已删除</li>
+<li><strong>replies_count</strong> [Integer] 回帖数量</li>
+<li><strong>likes_count</strong> [Integer] 赞数量</li>
+<li><strong>last_reply_user_id</strong> [Integer] 最后回复人用户编号</li>
+<li><strong>last_reply_user_login</strong> [String] 最后回复者 login</li>
+<li><strong>user</strong> <a href="UserSerializer.html">UserSerializer</a> 最后回复者用户对象</li>
+<li><strong>closed_at</strong> [DateTime] 结帖时间，null 表示正常帖子</li>
+<li><strong>replied_at</strong> [DateTime] 最后回帖时间</li>
+<li><strong>created_at</strong> [DateTime] 创建时间</li>
+<li><strong>updated_at</strong> [DateTime] 更新时间</li>
+<li><strong>body</strong> [String] 话题正文，原始 Markdown</li>
+<li><strong>body_html</strong> [String] 以转换成 HTML 的正文</li>
+<li><strong>hits</strong> [Integer] 阅读次数</li>
+</ul>
+<h1><a class="header" href="#replyserializer" id="replyserializer">ReplySerializer</a></h1>
+<p>回帖信息</p>
+<h2><a class="header" href="#attributes-3" id="attributes-3">attributes</a></h2>
+<ul>
+<li><strong>id</strong> [Integer] 编号</li>
+<li><strong>body_html</strong> [String] 以转换成 HTML 的正文</li>
+<li><strong>topic_id</strong> [Integer] 话题编号</li>
+<li><strong>deleted</strong> [Boolean] 是否已删除</li>
+<li><strong>likes_count</strong> [Integer] 赞数量</li>
+<li><strong>user</strong> <a href="UserSerializer.html">UserSerializer</a> 最后回复者用户对象</li>
+<li><strong>created_at</strong> [DateTime] 创建时间</li>
+<li><strong>updated_at</strong> [DateTime] 更新时间</li>
+</ul>
+<h1><a class="header" href="#replydetailserializer" id="replydetailserializer">ReplyDetailSerializer</a></h1>
+<p>包含原始正文 Markdown 信息的回帖</p>
+<h2><a class="header" href="#attributes-4" id="attributes-4">attributes</a></h2>
+<ul>
+<li><strong>id</strong> [Integer] 编号</li>
+<li><strong>body_html</strong> [String] 以转换成 HTML 的正文</li>
+<li><strong>topic_id</strong> [Integer] 话题编号</li>
+<li><strong>deleted</strong> [Boolean] 是否已删除</li>
+<li><strong>likes_count</strong> [Integer] 赞数量</li>
+<li><strong>user</strong> <a href="UserSerializer.html">UserSerializer</a> 最后回复者用户对象</li>
+<li><strong>created_at</strong> [DateTime] 创建时间</li>
+<li><strong>updated_at</strong> [DateTime] 更新时间</li>
+<li><strong>topic_title</strong> [String] 话题标题</li>
+<li><strong>body</strong> [String] 回帖正文，原始 Markdown</li>
+</ul>
+<h1><a class="header" href="#nodeserializer" id="nodeserializer">NodeSerializer</a></h1>
+<p>节点详情</p>
+<h2><a class="header" href="#attributes-5" id="attributes-5">attributes</a></h2>
+<ul>
+<li><strong>id</strong> [Integer] 编号</li>
+<li><strong>name</strong> [String] 节点名称</li>
+<li><strong>summary</strong> [String] 简介, Markdown 格式</li>
+<li><strong>section_id</strong> [Integer] 大类别编号</li>
+<li><strong>section_name</strong> [String] 大类别名称</li>
+<li><strong>topics_count</strong> [Integer] 话题数量</li>
+<li>sort <strong>Integer</strong> 排序优先级</li>
+<li><strong>updated_at</strong> [DateTime] 更新时间</li>
+</ul>
+<h1><a class="header" href="#notificationserializer" id="notificationserializer">NotificationSerializer</a></h1>
+<p>通知数据</p>
+<h2><a class="header" href="#attributes-6" id="attributes-6">attributes</a></h2>
+<ul>
+<li><strong>id</strong> [Integer] 编号</li>
+<li><strong>type</strong> [String] 通知类型</li>
+<li><strong>read</strong> [Boolean] 是否已读</li>
+<li><strong>actor</strong> <a href="UserSerializer.html">UserSerializer</a> 动作发起者</li>
+<li><strong>mention_type</strong> [String] 提及的数据类型 <code>Topic</code>, <code>Reply</code></li>
+<li><strong>created_at</strong> [DateTime] 创建时间</li>
+<li><strong>updated_at</strong> [DateTime] 更新时间</li>
+</ul>
 
                     </main>
 
