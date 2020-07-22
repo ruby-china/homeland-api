@@ -19,6 +19,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Install MdBook
         uses: peaceiris/actions-mdbook@v1.1.12
       - name: Build Book
