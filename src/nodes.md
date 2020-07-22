@@ -8,7 +8,7 @@ GET /api/v3/nodes
 
 ### Response
 
-Array<[NodeSerializer](NodeSerializer)>
+Array<[NodeSerializer](NodeSerializer.md)>
 
 ## 节点详情
 
@@ -20,5 +20,5 @@ GET /api/v3/nodes/:id
 
 ### Response
 
-[NodeSerializer](http://yuque.com/ruby-china/api/nodes/NodeSerializer)
+[NodeSerializer](http://yuque.com/ruby-china/api/nodes/NodeSerializer.md)
 

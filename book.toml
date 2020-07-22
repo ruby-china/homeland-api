@@ -4,3 +4,7 @@ language = "zh-CN"
 multilingual = false
 src = "src"
 title = "Homeland API"
+
+[output.html]
+copy-fonts = true
+git-repository-url = "https://github.com/ruby-china/homeland-api"

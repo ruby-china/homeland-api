@@ -10,7 +10,7 @@ GET /api/v3/replies/:id
 
 ### Response
 
-[ReplyDetailSerializer](ReplyDetailSerializer)
+[ReplyDetailSerializer](ReplyDetailSerializer.md)
 
 ## 修改回帖
 
@@ -24,7 +24,7 @@ POST /api/v3/replies/:id
 
 ### Response
 
-[ReplyDetailSerializer](ReplyDetailSerializer) - 更新过后的数据
+[ReplyDetailSerializer](ReplyDetailSerializer.md) - 更新过后的数据
 
 ## 删除回帖
 

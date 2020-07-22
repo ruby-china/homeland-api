@@ -14,7 +14,7 @@
 * **likes_count** [Integer] 赞数量
 * **last_reply_user_id** [Integer] 最后回复人用户编号
 * **last_reply_user_login** [String] 最后回复者 login
-* **user** [UserSerializer](UserSerializer) 最后回复者用户对象
+* **user** [UserSerializer](UserSerializer.md) 最后回复者用户对象
 * **closed_at** [DateTime] 结帖时间，null 表示正常帖子
 * **replied_at** [DateTime] 最后回帖时间
 * **created_at** [DateTime] 创建时间

@@ -12,7 +12,7 @@ GET /api/v3/users
 
 ### Response
 
-Array<[UserSerializer](/ruby-china/api/UserSerializer)>
+Array<[UserSerializer](/ruby-china/api/UserSerializer.md)>
 
 ## 获取某个用户的详细信息
 
@@ -24,7 +24,7 @@ GET /api/v3/users/:id
 
 ### Response
 
-[UserDetailSerializer](/ruby-china/api/UserDetailSerializer)
+[UserDetailSerializer](/ruby-china/api/UserDetailSerializer.md)
 
 ## 获取当前用户的完整信息
 
@@ -36,7 +36,7 @@ GET /api/v3/users/me
 
 ### Response
 
-[UserDetailSerializer](/ruby-china/api/UserDetailSerializer)
+[UserDetailSerializer](/ruby-china/api/UserDetailSerializer.md)
 
 ## 用户回帖列表
 
@@ -62,7 +62,7 @@ GET /api/v3/users/:id/topics
 
 ### Response
 
-Array<[TopicSerializer](/ruby-china/api/TopicSerializer)>
+Array<[TopicSerializer](/ruby-china/api/TopicSerializer.md)>
 
 ## 屏蔽用户
 
@@ -95,7 +95,7 @@ GET /api/v3/users/:id/blocked
 
 ### Response
 
-Array<[UserSerializer](/ruby-china/api/UserSerializer)>
+Array<[UserSerializer](/ruby-china/api/UserSerializer.md)>
 
 ## 关注用户
 
@@ -128,7 +128,7 @@ GET /api/v3/users/:id/following
 
 ### Response
 
-Array<[UserSerializer](/ruby-china/api/UserSerializer)>
+Array<[UserSerializer](/ruby-china/api/UserSerializer.md)>
 
 ## 获取用户的关注者列表
 
@@ -145,7 +145,7 @@ GET /api/v3/users/:id/followers
 
 ### Response
 
-Array<[UserSerializer](/ruby-china/api/UserSerializer)>
+Array<[UserSerializer](/ruby-china/api/UserSerializer.md)>
 
 ## 获取某个用户的收藏列表
 
@@ -162,5 +162,5 @@ GET /api/v3/users/:id/favorites
 
 ### Response
 
-Array<[TopicSerializer](/ruby-china/api/TopicSerializer)>
+Array<[TopicSerializer](/ruby-china/api/TopicSerializer.md)>
 

@@ -10,5 +10,5 @@ GET /api/v3/hello
 
 ### Response
 
-[UserDetailSerializer](UserDetailSerializer)
+[UserDetailSerializer](UserDetailSerializer.md)
 

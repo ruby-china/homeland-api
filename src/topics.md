@@ -11,14 +11,14 @@ GET /api/v3/topics
 ### Parameters:
 
 * type (String) - 排序类型, default: `last_actived`
-    * 可选值：`last_actived, recent, no_reply, popular, excellent` 
+    * 可选值：`last_actived, recent, no_reply, popular, excellent`
 * node_id (Integer) - 节点编号，如果有给，就会只去节点下的话题
 * offset (Integer) - default: 0
 * limit (Integer) - default: 20, range: 1..150
 
 ### Response
 
-Array<[TopicSerializer](TopicSerializer)>
+Array<[TopicSerializer](TopicSerializer.md)>
 
 ## 话题详情
 
@@ -30,7 +30,7 @@ GET /api/v3/topics/:id
 
 ### Response
 
-[TopicDetailSerializer](TopicDetailSerializer)
+[TopicDetailSerializer](TopicDetailSerializer.md)
 
 ## 创建新话题
 
@@ -48,7 +48,7 @@ POST /api/v3/topics
 
 ### Response
 
-[TopicDetailSerializer](TopicDetailSerializer)
+[TopicDetailSerializer](TopicDetailSerializer.md)
 
 ## 修改话题
 
@@ -66,7 +66,7 @@ PUT /api/v3/topics/:id
 
 ### Response
 
-[TopicDetailSerializer](TopicDetailSerializer)
+[TopicDetailSerializer](TopicDetailSerializer.md)
 
 ## 删除话题
 
@@ -90,7 +90,7 @@ POST /api/v3/topics/:id/replies
 
 ### Response
 
-[ReplySerializer](ReplySerializer)
+[ReplySerializer](ReplySerializer.md)
 
 ## 话题的回帖列表
 
@@ -107,7 +107,7 @@ GET /api/v3/topics/:id/replies
 
 ### Response
 
-Array<[ReplySerializer](ReplySerializer)>
+Array<[ReplySerializer](ReplySerializer.md)>
 
 ## 关注话题
 

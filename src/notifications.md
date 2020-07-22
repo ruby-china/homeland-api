@@ -13,7 +13,7 @@ GET /api/v3/notifications
 
 ### Response
 
-Array<[NotificationSerializer](NotificationSerializer)>
+Array<[NotificationSerializer](NotificationSerializer.md)>
 
 ## 批量将通知设成已读状态
 

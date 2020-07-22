@@ -9,7 +9,7 @@
 * **topic_id** [Integer] 话题编号
 * **deleted** [Boolean] 是否已删除
 * **likes_count** [Integer] 赞数量
-* **user** [UserSerializer](UserSerializer) 最后回复者用户对象
+* **user** [UserSerializer](UserSerializer.md) 最后回复者用户对象
 * **created_at** [DateTime] 创建时间
 * **updated_at** [DateTime] 更新时间
 
