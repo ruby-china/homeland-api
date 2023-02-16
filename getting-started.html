@@ -4,15 +4,10 @@
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>快速开始 - Homeland API</title>
-        
-        
 
 
         <!-- Custom HTML head -->
         
-
-
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
@@ -26,9 +21,7 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        
         <link rel="stylesheet" href="fonts/fonts.css">
-        
 
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
@@ -36,19 +29,18 @@
         <link rel="stylesheet" href="ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
-        
 
-        
     </head>
     <body>
+    <div id="body-container">
         <!-- Provide site root to javascript -->
-        <script type="text/javascript">
+        <script>
             var path_to_root = "";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
                 var theme = localStorage.getItem('mdbook-theme');
                 var sidebar = localStorage.getItem('mdbook-sidebar');
@@ -64,7 +56,7 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
+        <script>
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
@@ -76,7 +68,7 @@
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
+        <script>
             var html = document.querySelector('html');
             var sidebar = 'hidden';
             if (document.body.clientWidth >= 1080) {
@@ -97,8 +89,7 @@
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                
-                <div id="menu-bar-hover-placeholder"></div>
+                                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky bordered">
                     <div class="left-buttons">
                         <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
@@ -108,17 +99,15 @@
                             <i class="fa fa-paint-brush"></i>
                         </button>
                         <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                             <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                         </ul>
-                        
                         <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                             <i class="fa fa-search"></i>
                         </button>
-                        
                     </div>
 
                     <h1 class="menu-title">Homeland API</h1>
@@ -127,18 +116,16 @@
                         <a href="print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
-                        
                         <a href="https://github.com/ruby-china/homeland-api" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                        
+
                     </div>
                 </div>
 
-                
                 <div id="search-wrapper" class="hidden">
                     <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
                     </form>
                     <div id="searchresults-outer" class="searchresults-outer hidden">
                         <div id="searchresults-header" class="searchresults-header"></div>
@@ -146,10 +133,9 @@
                         </ul>
                     </div>
                 </div>
-                
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
+                <script>
                     document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
                     document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
                     Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
@@ -159,23 +145,23 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#快速开始" id="快速开始">快速开始</a></h1>
+                        <h1 id="快速开始"><a class="header" href="#快速开始">快速开始</a></h1>
 <p>本文介绍 Ruby China API 的基础知识，以及用户认证的方式。</p>
-<h3><a class="header" href="#访问域名" id="访问域名">访问域名</a></h3>
+<h3 id="访问域名"><a class="header" href="#访问域名">访问域名</a></h3>
 <ul>
 <li><a href="https://ruby-china.org/">https://ruby-china.org</a></li>
 </ul>
-<h2><a class="header" href="#oauth-2--api-认证" id="oauth-2--api-认证">OAuth 2 / API 认证</a></h2>
+<h2 id="oauth-2--api-认证"><a class="header" href="#oauth-2--api-认证">OAuth 2 / API 认证</a></h2>
 <p>在使用 API 之前，你需要 <a href="https://ruby-china.org/oauth/applications/new">注册应用</a> 并获得可以 <strong>OAuth App</strong> 信息。并使用标准的 OAuth 2 实现登录，获得 <code>access_token</code> 信息。</p>
-<h3><a class="header" href="#oauth-路径" id="oauth-路径">OAuth 路径</a></h3>
+<h3 id="oauth-路径"><a class="header" href="#oauth-路径">OAuth 路径</a></h3>
 <ul>
 <li>/oauth/authorize</li>
 <li>/oauth/token</li>
 <li>/oauth/revoke</li>
 </ul>
-<h3><a class="header" href="#response-说明" id="response-说明">Response 说明</a></h3>
+<h3 id="response-说明"><a class="header" href="#response-说明">Response 说明</a></h3>
 <p>所有 Response 采用 JSON 格式返回，请求状态通过 HTTP Status 返回。</p>
-<h3><a class="header" href="#http-status" id="http-status">HTTP Status</a></h3>
+<h3 id="http-status"><a class="header" href="#http-status">HTTP Status</a></h3>
 <p>错误的情况 Response Body 一定会是这样的格式: <code>{ &quot;error&quot; : &quot;Error message&quot; }</code></p>
 <ul>
 <li>200, 201 - 请求成功，或执行成功。</li>
@@ -185,7 +171,7 @@
 <li>404 - 资源不存在。</li>
 <li>500 - 服务器异常。</li>
 </ul>
-<h4><a class="header" href="#资源权限描述" id="资源权限描述">资源权限描述</a></h4>
+<h4 id="资源权限描述"><a class="header" href="#资源权限描述">资源权限描述</a></h4>
 <p>在部分 API 的 response 内容里面你会看到 <code>abilities</code> 节点，这是特别标识当前 <code>access_token</code> 对应的用户对此资源的权限。</p>
 <p>请参考源代码，确定那些路径是需要用户认证的，需要用户认证的路径，你需要带上 <code>access_token=?</code> 参数。</p>
 <p><strong>例如：</strong></p>
@@ -201,7 +187,7 @@
 <li>update 是否有权限修改</li>
 <li>destroy 是否有权限删除</li>
 </ul>
-<h2><a class="header" href="#演示" id="演示">演示</a></h2>
+<h2 id="演示"><a class="header" href="#演示">演示</a></h2>
 <p>我们用 Ruby 演示一下访问 <a href="root">/api/v3/hello.json</a> 这个路径，其中包含 OAuth 2 的流程。</p>
 <p>*这里用到 RubyGem *<a href="https://github.com/intridea/oauth2"><em>oauth2</em></a></p>
 <pre><code class="language-ruby">require &quot;oauth2&quot;client = OAuth2::Client.new('client id', 'secret', site: 'https://ruby-china.org')
@@ -217,13 +203,10 @@ puts res.statusputs res.body
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                        
 
-                        
                             <a rel="next" href="root.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
-                        
 
                         <div style="clear: both"></div>
                     </nav>
@@ -231,45 +214,33 @@ puts res.statusputs res.body
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                
 
-                
                     <a rel="next" href="root.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
-                
             </nav>
 
         </div>
 
-        
 
-        
 
-        
 
-        
-        <script type="text/javascript">
+        <script>
             window.playground_copyable = true;
         </script>
-        
 
-        
 
-        
-        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
-        
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
 
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
 
         <!-- Custom JS scripts -->
-        
 
-        
 
+    </div>
     </body>
 </html>
