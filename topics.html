@@ -152,7 +152,7 @@
 </code></pre>
 <h3 id="parameters"><a class="header" href="#parameters">Parameters:</a></h3>
 <ul>
-<li>type (String) - 排序类型, default: <code>last_actived</code>
+<li>type (String) - 排序类型，default: <code>last_actived</code>
 <ul>
 <li>可选值：<code>last_actived, recent, no_reply, popular, excellent</code></li>
 </ul>
@@ -175,9 +175,9 @@
 </code></pre>
 <h3 id="parameters-1"><a class="header" href="#parameters-1">Parameters:</a></h3>
 <ul>
-<li>title (String) — 标题, [required]</li>
-<li>node_id (Integer) — 节点编号, [required]</li>
-<li>body (Markdown) — 格式的正文, [required]</li>
+<li>title (String) — 标题，[required]</li>
+<li>node_id (Integer) — 节点编号，[required]</li>
+<li>body (Markdown) — 格式的正文，[required]</li>
 </ul>
 <h3 id="response-2"><a class="header" href="#response-2">Response</a></h3>
 <p><a href="TopicDetailSerializer.html">TopicDetailSerializer</a></p>
@@ -187,9 +187,9 @@
 </code></pre>
 <h3 id="parameters-2"><a class="header" href="#parameters-2">Parameters</a></h3>
 <ul>
-<li>title (String) — 标题, [required]</li>
-<li>node_id (Integer) — 节点编号, [required]</li>
-<li>body (Markdown) — 格式的正文, [required]</li>
+<li>title (String) — 标题，[required]</li>
+<li>node_id (Integer) — 节点编号，[required]</li>
+<li>body (Markdown) — 格式的正文，[required]</li>
 </ul>
 <h3 id="response-3"><a class="header" href="#response-3">Response</a></h3>
 <p><a href="TopicDetailSerializer.html">TopicDetailSerializer</a></p>
@@ -231,12 +231,12 @@
 <pre><code class="language-markup">POST /api/v3/topics/:id/unfavorite
 </code></pre>
 <h2 id="话题动作接口"><a class="header" href="#话题动作接口">话题动作接口</a></h2>
-<p>对 <code>:id</code> 这篇话题发起动作（屏蔽、加精华、结束讨论...） 注意类型有不同的权限，详见 <code>GET /api/v3/topics/:id</code> 返回的 <code>abilities</code></p>
+<p>对 <code>:id</code> 这篇话题发起动作（屏蔽、加精华、结束讨论...）注意类型有不同的权限，详见 <code>GET /api/v3/topics/:id</code> 返回的 <code>abilities</code></p>
 <pre><code>POST /api/v3/topics/:id/action?type=:type
 </code></pre>
 <h3 id="parameters-5"><a class="header" href="#parameters-5">Parameters:</a></h3>
 <ul>
-<li>type (String) — 动作类型, ban - 屏蔽话题, excellent - 加精华, unexcellent - 去掉精华, close - 关闭回复, open - 开启回复</li>
+<li>type (String) — 动作类型，ban - 屏蔽话题，excellent - 加精华，unexcellent - 去掉精华，close - 关闭回复，open - 开启回复</li>
 </ul>
 
                     </main>
