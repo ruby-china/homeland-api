@@ -22,7 +22,7 @@
 * **followers_count** [Integer] 有多少个关注者
 * **favorites_count** [Integer] 收藏的话题数量
 * **level** [String] 用户级别
-* **level_name** [String] 用户级别(用于显示)
+* **level_name** [String] 用户级别 (用于显示)
 * **created_at** [DateTime] 注册时间 `ISO 8601` 格式
 
 

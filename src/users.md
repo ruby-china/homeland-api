@@ -8,7 +8,7 @@ GET /api/v3/users
 
 ### Parameters
 
-* limit (Integer)  - default: 20，range: 1..100
+* limit (Integer)  - default: 20, range: 1..100
 
 ### Response
 
@@ -56,7 +56,7 @@ GET /api/v3/users/:id/topics
 
 ### Parameters
 
-* order (String) - 排序方式, default: 'recent', range: %w(recent likes replies)
+* order (String) - 排序方式，default: 'recent', range: %w(recent likes replies)
 * offset (Integer) - default: 0
 * limit (Integer) - default: 20, range: 1..150
 

@@ -10,7 +10,7 @@ GET /api/v3/topics
 
 ### Parameters:
 
-* type (String) - 排序类型, default: `last_actived`
+* type (String) - 排序类型，default: `last_actived`
     * 可选值：`last_actived, recent, no_reply, popular, excellent`
 * node_id (Integer) - 节点编号，如果有给，就会只去节点下的话题
 * offset (Integer) - default: 0
@@ -42,9 +42,9 @@ POST /api/v3/topics
 
 ### Parameters:
 
-* title (String) — 标题, [required]
-* node_id (Integer) — 节点编号, [required]
-* body (Markdown) — 格式的正文, [required]
+* title (String) — 标题，[required]
+* node_id (Integer) — 节点编号，[required]
+* body (Markdown) — 格式的正文，[required]
 
 ### Response
 
@@ -60,9 +60,9 @@ PUT /api/v3/topics/:id
 
 ### Parameters
 
-* title (String) — 标题, [required]
-* node_id (Integer) — 节点编号, [required]
-* body (Markdown) — 格式的正文, [required]
+* title (String) — 标题，[required]
+* node_id (Integer) — 节点编号，[required]
+* body (Markdown) — 格式的正文，[required]
 
 ### Response
 
@@ -135,7 +135,7 @@ POST /api/v3/topics/:id/unfavorite
 
 ## 话题动作接口
 
-对 `:id` 这篇话题发起动作（屏蔽、加精华、结束讨论...） 注意类型有不同的权限，详见 `GET /api/v3/topics/:id` 返回的 `abilities`
+对 `:id` 这篇话题发起动作（屏蔽、加精华、结束讨论...）注意类型有不同的权限，详见 `GET /api/v3/topics/:id` 返回的 `abilities`
 
 ```
 POST /api/v3/topics/:id/action?type=:type
@@ -143,7 +143,7 @@ POST /api/v3/topics/:id/action?type=:type
 
 ### Parameters:
 
-* type (String) — 动作类型, ban - 屏蔽话题, excellent - 加精华, unexcellent - 去掉精华, close - 关闭回复, open - 开启回复
+* type (String) — 动作类型，ban - 屏蔽话题，excellent - 加精华，unexcellent - 去掉精华，close - 关闭回复，open - 开启回复
 
 
 
